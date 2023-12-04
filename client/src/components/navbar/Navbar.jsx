@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { darkMode } from '../../constant/utils';
 import MobileNav from './MobileNav';
-import DesktopNav from './Desktopnav';
+import DesktopNav from './DesktopNav';
 
 function Navbar() {
   const handleClick = () => {
@@ -16,11 +16,14 @@ function Navbar() {
     >
       <div className='flex justify-between lg:justify-center items-center flex-row lg:flex-col p-8 w-full'>
         <div className='text-start lg:text-center'>
-          <h1 className='text-2xl lg:text-4xl font-semibold hover:opacity-[.75]'>
+          <h1 className='hidden sm:block text-xl lg:text-3xl font-semibold hover:opacity-[.75]'>
             <Link to='/'>Xenon Vergara Blog</Link>
           </h1>
+          <h1 className='block sm:hidden text-xl lg:text-3xl font-semibold hover:opacity-[.75]'>
+            <Link to='/'>Blog</Link>
+          </h1>
           <p
-            className={`text-sm lg:text-lg ${
+            className={`text-sm lg:text-medium ${
               darkMode.value ? 'text-[#aaa]' : 'text-[#777]'
             }`}
           >
@@ -31,7 +34,6 @@ function Navbar() {
         <MobileNav handleClick={handleClick} />
       </div>
       <div className='border-b w-full border-[#aaa] mb-8'></div>
-
       <DesktopNav handleClick={handleClick} />
     </div>
   );

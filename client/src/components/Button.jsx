@@ -22,6 +22,7 @@ function Button({
 
     button.appendChild(circle);
     onClickHandle();
+
     setTimeout(() => {
       button.removeChild(circle);
     }, 600);

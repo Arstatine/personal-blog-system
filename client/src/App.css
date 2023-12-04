@@ -28,3 +28,14 @@ button .circle {
     opacity: 0;
   }
 }
+
+.crumbs:after {
+  content: '/';
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.breadcrumbs .crumbs:last-child:after {
+  content: '';
+  display: none;
+}

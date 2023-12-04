@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import Button from '../Button';
 import { darkMode } from '../../constant/utils';
 import { Moon, Search, Sun } from 'lucide-react';
+import NavLinks from './NavLinks';
 
 function DesktopNav() {
   const handleClick = () => {
@@ -11,12 +11,7 @@ function DesktopNav() {
   return (
     <nav className='container hidden lg:flex justify-between items-center pb-8'>
       <div className='shrink-0'>Blag</div>
-      <div className='flex justify-center gap-5'>
-        <Link to='/'>Home</Link>
-        <Link to='/'>Home</Link>
-        <Link to='/'>Home</Link>
-        <Link to='/'>Home</Link>
-      </div>
+      <NavLinks />
       <div className='flex justify-center items-center gap-2 shrink-0'>
         <Link
           to='/search'
