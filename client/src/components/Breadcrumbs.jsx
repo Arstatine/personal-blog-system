@@ -6,11 +6,12 @@ function Breadcrumbs() {
   const location = useLocation();
   const [breadcrumbs, setBreadcrumbs] = useState(null);
 
+  // useEffect for destructuring path
   useEffect(() => {
     let currentLink = [];
     let bc = location.pathname.split('/').map((crumb, index, array) => {
       const isLast = index === array.length - 1;
-      console.log(isLast);
+
       if (crumb != '') {
         currentLink.push(`/${crumb}`);
       }
@@ -19,8 +20,8 @@ function Breadcrumbs() {
         <div className='crumbs' key={index}>
           <Link
             to={crumb == '' ? '/' : currentLink.join('')}
-            className={`capitalize ${
-              isLast ? 'opacity-[.75] ' : 'hover:opacity-[.75]'
+            className={`text-ellipsis whitespace-nowrap capitalize hover:underline ${
+              isLast && 'underline'
             }`}
           >
             {crumb == '' ? 'Home' : crumb}
@@ -32,15 +33,16 @@ function Breadcrumbs() {
   }, [location.pathname]);
 
   return (
+    // returns breadcrumbs
     <div
       className={`w-full flex justify-center items-center ${
         darkMode.value
-          ? 'bg-light-primary text-light-bg'
-          : 'bg-dark-primary text-light-bg'
+          ? 'bg-dark-secondary text-dark-text'
+          : 'bg-light-secondary text-light-text'
       }`}
     >
       <div
-        className={`breadcrumbs px-8 lg:px-0 w-full container flex py-4 flex-center items-center`}
+        className={`breadcrumbs overflow-hidden px-4 lg:px-0 w-full container flex py-4 flex-center items-center`}
       >
         {breadcrumbs}
       </div>

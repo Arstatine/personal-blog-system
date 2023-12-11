@@ -4,15 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Add your custom colors here
-        ['light-primary']: '#3498db',
-        ['light-secondary']: '#2ecc71',
-        ['light-accent']: '#e74c3c',
-        ['light-bg']: '#f8f9fa',
-        ['dark-primary']: '#6a7be4',
-        ['dark-secondary']: '#9cf3b2',
-        ['dark-accent']: '#ff7e67',
-        ['dark-bg']: '#2c2c2c',
+        ['light-primary']: '#61A8A0',
+        ['light-secondary']: '#9FD1CC',
+        ['light-accent']: '#74C3BA',
+        ['light-bg']: '#F2F7F6',
+        ['light-text']: '#0A0F0F',
+        ['light-hover']: 'rgba(159,209,204,.5)',
+        ['dark-primary']: '#579E96',
+        ['dark-secondary']: '#2E605B',
+        ['dark-accent']: '#3C8B82',
+        ['dark-bg']: '#080D0C',
+        ['dark-text']: '#F0F5F5',
+        ['dark-hover']: 'rgba(46,96,91, .5)',
       },
     },
   },

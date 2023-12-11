@@ -4,7 +4,9 @@ function Footer() {
   return (
     <div
       className={`p-8 text-center ${
-        darkMode.value ? 'bg-light-bg text-dark-bg' : 'bg-dark-bg text-light-bg'
+        darkMode.value
+          ? 'bg-dark-bg text-dark-text'
+          : 'bg-light-bg text-light-text'
       }`}
     >
       &copy; Xenon

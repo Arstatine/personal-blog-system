@@ -1,35 +1,9 @@
-import { Link } from 'react-router-dom';
-import { darkMode } from '../../constant/utils';
-import { Moon, Search, Sun } from 'lucide-react';
 import NavLinks from './NavLinks';
 
 function DesktopNav() {
-  const handleClick = () => {
-    darkMode.value = !darkMode.value;
-  };
-
   return (
-    <nav className='container hidden lg:flex justify-between items-center pb-8'>
-      <div className='shrink-0'>Blag</div>
+    <nav className='container flex justify-center items-center'>
       <NavLinks />
-      <div className='flex justify-center items-center gap-2 shrink-0'>
-        <Link
-          to='/search'
-          className={`hover:bg-slate-200 p-4 rounded-full ${
-            darkMode.value ? 'hover:bg-neutral-700' : 'hover:bg-slate-100'
-          }`}
-        >
-          <Search />
-        </Link>
-        <div
-          className={`rounded-full p-2 cursor-pointer ${
-            darkMode.value ? 'hover:bg-neutral-700' : 'hover:bg-slate-100'
-          }`}
-          onClick={handleClick}
-        >
-          {darkMode.value ? <Moon size={36} /> : <Sun size={36} />}
-        </div>
-      </div>
     </nav>
   );
 }
