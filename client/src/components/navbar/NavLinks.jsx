@@ -4,7 +4,7 @@ import { navLinks } from '../../constant/navLinks';
 import { Fragment, useEffect, useState } from 'react';
 import CategoryList from './CategoryList';
 
-function NavLinks({ handleMenuClick }) {
+function NavLinks({ handleMenuClick, isSticky }) {
   const [dropdown, setDropdown] = useState(false);
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(null);
@@ -25,15 +25,21 @@ function NavLinks({ handleMenuClick }) {
           let link = links.path.toLowerCase() === '/' + activeLink;
           return (
             <Fragment key={index}>
-              {links?.path == '/category' ? (
+              {links?.path == '/categories' ? (
                 <Link
                   onClick={handleDropdown}
-                  className='py-5 text-center hover:opacity-[.75] transition-all group cursor-pointer flex justify-center items-center flex-col'
+                  className='py-5 text-center hover:opacity-75 transition-all group cursor-pointer flex justify-center items-center flex-col'
                 >
                   <div className='tracking-widest'>{links.title}</div>
                   <div
                     className={`hidden lg:block border-b transition-all ${
-                      darkMode.value ? 'border-dark-text' : 'border-light-text'
+                      darkMode.value
+                        ? isSticky
+                          ? 'border-light-text'
+                          : 'border-dark-text'
+                        : isSticky
+                        ? 'border-dark-text'
+                        : 'border-light-text'
                     } ${
                       link || dropdown ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}
@@ -43,12 +49,18 @@ function NavLinks({ handleMenuClick }) {
                 <Link
                   to={links.path}
                   onClick={handleMenuClick}
-                  className='py-5 text-center hover:opacity-[.75] transition-all group cursor-pointer flex justify-center items-center flex-col'
+                  className='py-5 text-center hover:opacity-75 transition-all group cursor-pointer flex justify-center items-center flex-col'
                 >
                   <div className='tracking-widest'>{links.title}</div>
                   <div
                     className={`hidden lg:block border-b transition-all ${
-                      darkMode.value ? 'border-dark-text' : 'border-light-text'
+                      darkMode.value
+                        ? isSticky
+                          ? 'border-light-text'
+                          : 'border-dark-text'
+                        : isSticky
+                        ? 'border-dark-text'
+                        : 'border-light-text'
                     } ${link ? 'w-full' : 'w-0 group-hover:w-full'}`}
                   ></div>
                 </Link>

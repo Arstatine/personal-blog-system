@@ -27,11 +27,6 @@ function Search() {
         darkMode.value ? 'bg-dark-bg' : 'bg-light-bg'
       }`}
     >
-      <div
-        className={`border-b w-full ${
-          darkMode.value ? 'border-dark-secondary' : 'border-light-secondary'
-        }`}
-      ></div>
       <Breadcrumbs />
 
       <div className={`flex justify-center items-center w-full p-8`}>

@@ -3,13 +3,26 @@ import AppRoutes from './routes';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer';
+import { darkMode } from './constant/utils';
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <AppRoutes />
-      <Footer />
+      <div className='min-h-screen flex justify-between items-stretch flex-col'>
+        <div>
+          <Navbar />
+        </div>
+        <div
+          className={`grow ${
+            darkMode.value
+              ? 'bg-dark-bg text-dark-text'
+              : 'bg-light-bg text-light-text'
+          }`}
+        >
+          <AppRoutes />
+        </div>
+        <Footer />
+      </div>
     </Router>
   );
 }

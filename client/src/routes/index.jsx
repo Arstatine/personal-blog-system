@@ -6,6 +6,7 @@ import {
   About,
   Category,
   CurrentCategory,
+  NotFound,
 } from '../views';
 
 function AppRoutes() {
@@ -14,11 +15,12 @@ function AppRoutes() {
       <Route index path='/' element={<Home />} />
       <Route path='/blogs' element={<Blogs />} />
       <Route path='/search' element={<Search />} />
-      <Route path='/category'>
+      <Route path='/categories'>
         <Route index element={<Category />} />
         <Route path=':id' element={<CurrentCategory />} />
       </Route>
       <Route path='/about' element={<About />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }

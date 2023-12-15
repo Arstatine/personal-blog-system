@@ -4,7 +4,7 @@ import { darkMode } from '../../constant/utils';
 function CategoryItem({ title, path, handleMenuClick }) {
   return (
     <Link
-      to={'/category/' + path}
+      to={'/categories/' + path}
       onClick={handleMenuClick}
       className={`flex items-center px-4 py-3 cursor-pointer ${
         darkMode.value ? 'hover:bg-dark-hover' : 'hover:bg-light-hover'

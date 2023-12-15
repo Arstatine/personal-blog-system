@@ -1,9 +1,9 @@
 import NavLinks from './NavLinks';
 
-function DesktopNav() {
+function DesktopNav({ isSticky }) {
   return (
     <nav className='container flex justify-center items-center'>
-      <NavLinks />
+      <NavLinks isSticky={isSticky} />
     </nav>
   );
 }

@@ -28,7 +28,7 @@ function CategoryList({ dropdown, setDropdown, handleMenuClick }) {
               darkMode.value ? 'text-light-primary' : 'text-dark-primary'
             }`}
           >
-            Category
+            Categories
           </h5>
           <div
             onClick={() => setDropdown(false)}
@@ -46,14 +46,14 @@ function CategoryList({ dropdown, setDropdown, handleMenuClick }) {
             }`}
           ></div>
           <Link
-            to='category'
+            to='categories'
             onClick={() => {
               setDropdown(false);
               handleMenuClick();
             }}
             className='hover:underline transition-all'
           >
-            All categories
+            View All
           </Link>
           <div
             className={`border-b w-full mt-3 ${
