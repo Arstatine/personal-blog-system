@@ -15,9 +15,9 @@ export const blog_lists = [
       'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
-    id: '100000000001',
+    id: '100000000002',
     slug: 'the-best-budget-restaurant-in-the-philippines-100000000002',
-    title: 'The Best Budget Restaurant in the Philippines',
+    title: 'Ahe Best Budget Restaurant in the Philippines',
     description: `Mood music, dim lighting, servers in uniforms, and more silverware than you need. These are all very romantic elements in a restaurants, sure. But there's a simpler key to romance: you. A sneaky caress, a furtive smile, great conversation. That's what constitutes romance. Date places don't have to be expensive to be ideal. All you need is a little ingenuity.`,
     category: ['reviews', 'trends'],
     content: `<p>
@@ -30,9 +30,9 @@ export const blog_lists = [
       'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
-    id: '100000000001',
+    id: '100000000003',
     slug: 'the-best-budget-restaurant-in-the-philippines-100000000003',
-    title: 'The Best Budget Restaurant in the Philippines',
+    title: 'Zhe Best Budget Restaurant in the Philippines',
     description: `Mood music, dim lighting, servers in uniforms, and more silverware than you need. These are all very romantic elements in a restaurants, sure. But there's a simpler key to romance: you. A sneaky caress, a furtive smile, great conversation. That's what constitutes romance. Date places don't have to be expensive to be ideal. All you need is a little ingenuity.`,
     category: ['reviews', 'trends'],
     content: `<p>
