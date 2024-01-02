@@ -39,3 +39,22 @@ button .circle {
   content: '';
   display: none;
 }
+
+.moving-left:hover span {
+  animation-name: movingLeft;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: all;
+}
+
+@keyframes movingLeft {
+  0%,
+  50%,
+  100% {
+    margin-left: 0px;
+  }
+  25%,
+  75% {
+    margin-left: 10px;
+  }
+}

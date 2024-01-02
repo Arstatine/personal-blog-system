@@ -22,6 +22,7 @@ function Home() {
           className='h-auto md:h-[80vh] w-full object-contain md:object-cover'
         />
       </div>
+      <div className='h-[1000px]'></div>
     </div>
   );
 }

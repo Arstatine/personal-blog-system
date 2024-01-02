@@ -4,7 +4,7 @@ import { navLinks } from '../../constant/navLinks';
 import { Fragment, useEffect, useState } from 'react';
 import CategoryList from './CategoryList';
 
-function NavLinks({ handleMenuClick, isSticky }) {
+function NavLinks({ handleMenuClick }) {
   const [dropdown, setDropdown] = useState(false);
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(null);
@@ -33,13 +33,7 @@ function NavLinks({ handleMenuClick, isSticky }) {
                   <div className='tracking-widest'>{links.title}</div>
                   <div
                     className={`hidden lg:block border-b transition-all ${
-                      darkMode.value
-                        ? isSticky
-                          ? 'border-light-text'
-                          : 'border-dark-text'
-                        : isSticky
-                        ? 'border-dark-text'
-                        : 'border-light-text'
+                      darkMode.value ? 'border-dark-text' : 'border-light-text'
                     } ${
                       link || dropdown ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}
@@ -54,13 +48,7 @@ function NavLinks({ handleMenuClick, isSticky }) {
                   <div className='tracking-widest'>{links.title}</div>
                   <div
                     className={`hidden lg:block border-b transition-all ${
-                      darkMode.value
-                        ? isSticky
-                          ? 'border-light-text'
-                          : 'border-dark-text'
-                        : isSticky
-                        ? 'border-dark-text'
-                        : 'border-light-text'
+                      darkMode.value ? 'border-dark-text' : 'border-light-text'
                     } ${link ? 'w-full' : 'w-0 group-hover:w-full'}`}
                   ></div>
                 </Link>

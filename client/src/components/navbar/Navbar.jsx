@@ -53,16 +53,20 @@ function Navbar() {
       <div
         className={`w-full sticky top-0 z-[9999] ${
           darkMode.value
-            ? isSticky
-              ? 'bg-light-bg text-light-text'
-              : 'bg-dark-bg text-dark-text'
-            : isSticky
             ? 'bg-dark-bg text-dark-text'
             : 'bg-light-bg text-light-text'
         }`}
       >
         <div className='hidden lg:flex justify-center items-center flex-col'>
-          <DesktopNav handleMenuClick={handleMenuClick} isSticky={isSticky} />
+          <DesktopNav handleMenuClick={handleMenuClick} />
+
+          <div
+            className={`border-b w-full ${
+              darkMode.value
+                ? 'border-dark-secondary'
+                : 'border-light-secondary'
+            }`}
+          ></div>
         </div>
       </div>
       <div className='block lg:hidden'>
@@ -85,11 +89,6 @@ function Navbar() {
           <ArrowUp />
         </div>
       </div>
-      <div
-        className={`border-b w-full ${
-          darkMode.value ? 'border-dark-secondary' : 'border-light-secondary'
-        }`}
-      ></div>
     </>
   );
 }

@@ -9,9 +9,7 @@ function App() {
   return (
     <Router>
       <div className='min-h-screen flex justify-between items-stretch flex-col'>
-        <div>
-          <Navbar />
-        </div>
+        <Navbar />
         <div
           className={`grow ${
             darkMode.value
