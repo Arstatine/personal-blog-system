@@ -35,9 +35,12 @@ function BlogList({ categories, slug, image, title, description }) {
             );
           })}
         </div>
-        <div className='text-lg lg:text-2xl font-semibold line-clamp-2'>
+        <Link
+          to={'/' + slug}
+          className='text-lg lg:text-2xl font-semibold line-clamp-2 hover:opacity-75 transition-all'
+        >
           {title}
-        </div>
+        </Link>
         <p className='line-clamp-2 lg:line-clamp-3 text-sm lg:text-base '>
           {description}
         </p>
